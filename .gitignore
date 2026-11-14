@@ -1,0 +1,13 @@
+node_modules/
+.next/
+logs/
+error_docs/
+.composer/
+.imunify*
+.myimunify*
+httpdocs/
+*.log
+.env*
+.DS_Store
+tmp/
+scratch/

@@ -1,0 +1,145 @@
+/* ══════════════════════════════════════════════
+   Praxis Felsenau – Global Styles
+   Swiss Clinical Premium Design System
+   ══════════════════════════════════════════════ */
+
+:root {
+  /* ── Brand Colors — Felsenau Exact Logo Yellow & Soft Slate ── */
+  --teal-light:       #FFC023;   /* Primary Exact Logo Yellow */
+  --teal-dark:        #64748B;   /* Soft Slate 500 (Accessible dark grey/slate) */
+  --teal-text:        #475569;   /* Text Slate 600 */
+  --teal-mid:         #94A3B8;   /* Light Slate 400 */
+  --teal-pale:        #FFFAEC;   /* Very Light Warm Cream tint */
+  --teal-mint:        #FFF5D6;   /* Light Yellow Tint */
+  --accent-green:     #FFC023;   /* Primary Logo Yellow */
+  --accent-green-dark:#E5A91E;   /* Darker Yellow for hover */
+  --grey:             #64748B;   /* Slate 500 */
+  --grey-light:       #94A3B8;   /* Slate 400 */
+  --grey-pale:        #F8FAFC;   /* Slate 50 */
+
+  /* ── Warm Sunset Orange (Warm companion to Yellow & Slate) ── */
+  --orange:           #F97316;   /* Vibrant Warm Sunset Orange */
+  --orange-dark:      #EA580C;   /* Deep Tangerine / High Contrast Text */
+  --orange-deep:      #C2410C;   /* Accessible Dark Burnt Amber */
+  --orange-light:     #FB923C;   /* Light Warm Amber */
+  --orange-pale:      #FFF7ED;   /* Soft Warm Peach Tint */
+  --orange-glow:      rgba(249, 115, 22, 0.35);
+  --grad-warm:        linear-gradient(135deg, var(--teal-light) 0%, var(--orange) 100%);
+  --grad-warm-hover:  linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
+
+  /* ── Legacy aliases (keep components working seamlessly) ── */
+  --navy:             #64748B;   /* Soft Slate 500 */
+  --navy-dark:        #475569;   /* Deep Slate 600 */
+  --green:            var(--teal-light);
+  --green-dark:       var(--teal-dark);
+  --green-light:      #FFD25B;
+  --green-pale:       var(--teal-pale);
+  --green-mint:       var(--teal-mint);
+
+  /* ── Neutrals ── */
+  --cream:            #F8FAFC;
+  --warm-white:       #FFFFFF;
+  --sand:             #F1F5F9;
+  --sand-light:       #F8FAFC;
+  --text:             #334155;
+  --text-light:       #64748B;
+  --white:            #FFFFFF;
+  --border:           #E2E8F0;
+
+  /* ── Fonts ── */
+  --f-head: var(--font-playfair-display), Georgia, serif;
+  --f-body: var(--font-source-sans-3), system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  max-width: 100vw;
+  overflow-x: clip;
+}
+
+body {
+  font-family: var(--f-body);
+  color: var(--text);
+  background: var(--warm-white);
+  max-width: 100vw;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+img {
+  display: block;
+}
+
+p, h1, h2, h3, h4, h5, h6, span, a, li {
+  overflow-wrap: break-word;
+}
+
+/* ── Animations ── */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseLight {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
